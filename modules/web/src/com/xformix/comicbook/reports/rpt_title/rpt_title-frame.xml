@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_title.Rpt_titleEdit"
+        datasource="qryrpttitleDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.reports.rpt_title">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="57.6px" width="830.39996px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="Label8" value="Title Report"  height="40.0px" rowspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Label19" value="Total # of Titles:"  height="20.0px" row="1" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Text17" height="20.0px" width="90.0px" row="1" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeaderSection"  height="28.8px" width="753.6px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="Publisher_Label" value="Publisher"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Title_Label" value="Title"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="CountOfComicBookNUM_Label" value="# of Issues"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="SumOfCost_Label" value="Cost"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line11" height="1.0px" width="740.0px" colspan="4" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="14.4px" width="753.6px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <textField  id="Publisher" property="publisher"  datasource="qryrpttitleDs"  height="20.0px" width="130.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Title" property="title"  datasource="qryrpttitleDs"  height="20.0px" width="240.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="CountOfComicBookNUM" property="countofcomicbooknum"  datasource="qryrpttitleDs"  height="20.0px" width="260.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="SumOfCost" property="sumofcost"  datasource="qryrpttitleDs"  height="20.0px" width="90.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooterSection"  height="33.6px" width="748.8px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="Line12" height="1.0px" width="740.0px" colspan="4" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="Text9" height="20.0px" width="370.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Text10" height="20.0px" width="360.0px" colspan="2" row="1" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

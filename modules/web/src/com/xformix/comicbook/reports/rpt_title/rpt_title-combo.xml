@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="Title Report"
+        class="com.xformix.comicbook.reports.rpt_title.Rpt_titleCombo"
+        focusComponent="navigationTable"
+        lookupComponent="navigationTable"
+        messagesPack="com.xformix.comicbook.reports.rpt_title">
+    <dsContext>
+        <groupDatasource id="qryrpttitleDs"
+                         class="com.xformix.comicbook.entity.QryRptTitle"
+                         view="qryRptTitle-view">
+            <query>
+                <![CDATA[ select e from comicbook$QryRptTitle e order by e.countofcomicbooknum desc, e.sumofcost desc]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+                    <frame id="customFrame"
+                           height="100%"
+                           width="100%"
+                           screen="comicbook$Rpt_title.frame"/>
+    </layout>
+</window>

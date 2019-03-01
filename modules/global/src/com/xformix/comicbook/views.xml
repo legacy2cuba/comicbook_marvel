@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+<view class="com.xformix.comicbook.entity.SwitchboardItems" extends="_local" name="switchboardItems-view"/>
+    <view class="com.xformix.comicbook.entity.TblLocation" extends="_local" name="tblLocation-view"/>
+    <view class="com.xformix.comicbook.entity.Tbltitle" extends="_local" name="tbltitle-view"/>
+    <view class="com.xformix.comicbook.entity.Tblcatalog" extends="_local" name="tblcatalog-view">
+        <property name="titlenum" view="_local"/>
+        <property name="locationnum" view="_local"/>
+    </view>
+    <view class="com.xformix.comicbook.entity.QryListLocation" extends="_local" name="qryListLocation-view"/>
+    <view class="com.xformix.comicbook.entity.QryListPublisher" extends="_local" name="qryListPublisher-view"/>
+    <view class="com.xformix.comicbook.entity.QryListSeries" extends="_local" name="qryListSeries-view"/>
+    <view class="com.xformix.comicbook.entity.QryListTitle" extends="_local" name="qryListTitle-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptAge" extends="_local" name="qryRptAge-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptCatalog" extends="_local" name="qryRptCatalog-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptCost" extends="_local" name="qryRptCost-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptLocation" extends="_local" name="qryRptLocation-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptPublisher" extends="_local" name="qryRptPublisher-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptSeries" extends="_local" name="qryRptSeries-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptSubscriptions" extends="_local" name="qryRptSubscriptions-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptTitle" extends="_local" name="qryRptTitle-view"/>
+    <view class="com.xformix.comicbook.entity.QryRptUnknown" extends="_local" name="qryRptUnknown-view"/>
+</views>

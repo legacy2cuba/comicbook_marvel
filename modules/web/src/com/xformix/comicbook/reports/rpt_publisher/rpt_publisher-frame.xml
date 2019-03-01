@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_publisher.Rpt_publisherEdit"
+        datasource="qryrptpublisherDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.reports.rpt_publisher">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="52.8px" width="340.8px"  >
+        <columns count="1"/>
+        <rows>
+          <row>
+          <label  id="Label10" value="Publisher Report"  height="40.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeaderSection"  height="28.8px" width="769.76px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <label  id="Sum_Of_Cost_Label" value="Publisher"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Avg_Of_Cost_Label" value="# of Issues"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Label16" value="Cost"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line13" height="1.0px" width="740.0px" colspan="3" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="21.6px" width="744.0px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <textField  id="Sum_Of_Cost" property="publisher"  datasource="qryrptpublisherDs"  height="20.0px" width="330.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Avg_Of_Cost" property="countofissuenum"  datasource="qryrptpublisherDs"  height="20.0px" width="270.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="SumOfCost" property="sumofcost"  datasource="qryrptpublisherDs"  height="20.0px" width="130.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooterSection"  height="43.2px" width="787.2px"  >
+        <columns count="3"/>
+        <rows>
+          <row>
+            <label  id="Line14" height="1.0px" width="740.0px" colspan="3" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="Text11" height="20.0px" width="330.0px" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Text12" height="20.0px" width="400.0px" colspan="2" row="1" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

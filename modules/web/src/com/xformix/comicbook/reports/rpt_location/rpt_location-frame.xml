@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_location.Rpt_locationEdit"
+        messagesPack="com.xformix.comicbook.reports.rpt_location">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <vbox id="TOP_LEVEL"
+                  height="100%"
+                  stylename="report"
+                  width="1078px">
+                <grid id="ReportHeader"
+                      height="42px"
+                      spacing="true"
+                      width="315px">
+                    <columns count="3"/>
+                    <rows>
+                        <row>
+                            <label id="Label10"
+                                   align="MIDDLE_RIGHT"
+                                   colspan="3"
+                                   column="0"
+                                   height="40px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Comic Inventory"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageHeaderSection"
+                      height="36px"
+                      spacing="true"
+                      width="1044px">
+                    <columns count="7"/>
+                    <rows>
+                        <row>
+                            <label id="Sort_Order_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="0"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Location"
+                                   width="86px"/>
+                            <label id="Publisher_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="1"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Publisher"/>
+                            <label id="Title_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="2"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Title"
+                                   width="241px"/>
+                            <label id="IssueNUM_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="3"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Issue#"/>
+                            <label id="Label22"
+                                   align="MIDDLE_RIGHT"
+                                   column="4"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Cost"/>
+                            <label id="Label26"
+                                   align="MIDDLE_RIGHT"
+                                   column="5"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Date"
+                                   width="94px"/>
+                            <label id="Label18"
+                                   align="MIDDLE_RIGHT"
+                                   column="6"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Comments"
+                                   width="213px"/>
+                        </row>
+                        <row>
+                            <label id="Line15"
+                                   align="MIDDLE_CENTER"
+                                   colspan="7"
+                                   column="0"
+                                   height="1px"
+                                   row="1"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="860px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="GroupHeader0"
+                      height="34px"
+                      spacing="true"
+                      width="751px">
+                    <columns count="6"/>
+                    <rows>
+                        <row>
+                            <textField id="Location"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="location"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="109px"/>
+                            <textField id="Text19"
+                                       align="MIDDLE_LEFT"
+                                       column="1"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="175px"/>
+                            <label id="Label21"
+                                   align="MIDDLE_RIGHT"
+                                   column="2"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Comics"/>
+                            <label id="Label25"
+                                   align="MIDDLE_RIGHT"
+                                   column="3"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Cost:"
+                                   width="78px"/>
+                            <textField id="Text24"
+                                       align="MIDDLE_LEFT"
+                                       column="4"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="100px"/>
+                            <textField id="Sort_Order"
+                                       align="MIDDLE_LEFT"
+                                       column="5"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="sort_order"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       visible="false"
+                                       width="100px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="Detail"
+                      height="27px"
+                      spacing="true"
+                      width="864px">
+                    <columns count="8"/>
+                    <rows>
+                        <row>
+                            <label height="20px"
+                                   width="131px"/>
+                            <textField id="Publisher"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="publisher"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="82px"/>
+                            <textField id="Title"
+                                       align="MIDDLE_LEFT"
+                                       colspan="2"
+                                       column="1"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="title"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="254px"/>
+                            <textField id="IssueNUM"
+                                       align="MIDDLE_LEFT"
+                                       column="3"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="issuenum"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="68px"/>
+                            <textField id="Cost"
+                                       align="MIDDLE_LEFT"
+                                       column="4"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="cost"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="85px"/>
+                            <dateField id="Issue_Date"
+                                       align="MIDDLE_LEFT"
+                                       column="5"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="issue_date"
+                                       resolution="DAY"
+                                       row="0"
+                                       stylename="access-datefield"
+                                       width="157px"/>
+                            <textField id="Comments"
+                                       align="MIDDLE_LEFT"
+                                       column="6"
+                                       datasource="qryrptlocationDs"
+                                       height="20px"
+                                       property="comments"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="340px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageFooterSection"
+                      height="52px"
+                      spacing="true"
+                      width="893px">
+                    <columns count="7"/>
+                    <rows>
+                        <row>
+                            <label id="Line16"
+                                   align="MIDDLE_CENTER"
+                                   colspan="7"
+                                   column="0"
+                                   height="1px"
+                                   row="0"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="860px"/>
+                        </row>
+                        <row>
+                            <textField id="Text11"
+                                       align="MIDDLE_LEFT"
+                                       colspan="3"
+                                       column="0"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="310px"/>
+                            <textField id="Text12"
+                                       align="MIDDLE_LEFT"
+                                       colspan="2"
+                                       column="5"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="390px"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="Location Editor"
+        class="com.xformix.comicbook.web.tbllocation.TblLocationEdit"
+        datasource="tblLocationDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.web.tbllocation">
+    <dsContext>
+        <datasource id="tblLocationDs"
+                    class="com.xformix.comicbook.entity.TblLocation"
+                    view="_local"/>
+    </dsContext>
+    <dialogMode height="200"
+                width="400"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="tblLocationDs">
+            <column width="250px">
+                <field caption="Location"
+                       property="location"/>
+                <field caption="Sort Order"
+                       property="sort_order"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

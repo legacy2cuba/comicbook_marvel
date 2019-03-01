@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        xmlns:app="http://schemas.cloudgarden.com/gui/0.1/ui-component.xsd"
+        caption="msg://caption"
+        class="com.xformix.comicbook.forms.frm_sub_comic_entry.Frm_sub_comic_entryCombo"
+        focusComponent="navigationTable"
+        lookupComponent="navigationTable"
+        messagesPack="com.xformix.comicbook.forms.frm_sub_comic_entry">
+    <dsContext>
+
+    </dsContext>
+    <actions>
+        <action id="save"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="save"
+                shortcut="CTRL-ENTER"/>
+        <action id="cancel"
+                caption="mainMsg://actions.Cancel"
+                description="Esc"
+                icon="icons/cancel.png"
+                invoke="cancel"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="main">
+        <filter id="filter"
+                applyTo="navigationTable"
+                datasource="tblcatalogDs">
+            <properties include=".*"/>
+        </filter>
+        <split id="main"
+               orientation="horizontal"
+               pos="20"
+               width="100%">
+            <vbox id="lookupBox"
+                  expand="navigationTable"
+                  height="100%"
+                  spacing="true">
+                <groupTable id="navigationTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                    </actions>
+                    <columns>
+        <column id="comicbooknum" caption="Comicbooknum"/>
+        <column id="issuenum" caption="Issuenum"/>
+                    </columns>
+                    <rows datasource="tblcatalogDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true"
+                                  responsive="true">
+                        <button id="createBtn"
+                                action="navigationTable.create"/>
+                        <button id="editBtn"
+                                action="navigationTable.edit"/>
+                        <button id="removeBtn"
+                                action="navigationTable.remove"/>
+                    </buttonsPanel>
+                </groupTable>
+            </vbox>
+            <vbox id="editBox"
+                  expand="fieldGroupBox"
+                  height="100%"
+                  margin="false,false,false,true"
+                  spacing="true">
+                <vbox id="fieldGroupBox">
+	            <frame id="customFrame" 
+	                   height="100%"
+	                   screen="comicbook$Frm_sub_comic_entry.frame"/> 
+	                </vbox>
+	                <hbox id="actionsPane"
+	                      spacing="true"
+	                      visible="false">
+	                    <button id="saveBtn"
+	                            action="save"/>
+	                    <button id="cancelBtn"
+	                            action="cancel"/>
+	                </hbox>
+	            </vbox>
+            </split>
+    </layout>
+</window>

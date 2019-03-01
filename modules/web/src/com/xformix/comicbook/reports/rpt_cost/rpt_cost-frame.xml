@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_cost.Rpt_costEdit"
+        messagesPack="com.xformix.comicbook.reports.rpt_cost">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <vbox id="TOP_LEVEL"
+                  height="100%"
+                  stylename="report"
+                  width="748px">
+                <grid id="ReportHeader"
+                      height="74px"
+                      spacing="true"
+                      width="316px">
+                    <columns count="2"/>
+                    <rows>
+                        <row>
+                            <label id="Label10"
+                                   align="MIDDLE_RIGHT"
+                                   colspan="2"
+                                   column="0"
+                                   height="45px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Collection Cost Report"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageHeaderSection"
+                      height="28px"
+                      spacing="true"
+                      width="766px">
+                    <columns count="5"/>
+                    <rows>
+                        <row>
+                            <label id="Sum_Of_Cost_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="0"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Total Cost of Collection"/>
+                            <label id="Avg_Of_Cost_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="1"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Avg. Cost/issue"/>
+                            <label id="Min_Of_Cost_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="2"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Minimum Issue Cost"/>
+                            <label id="Max_Of_Cost_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="3"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Maximum Issue Cost"/>
+                            <label id="Count_Of_qry_Catalog_Label"
+                                   align="MIDDLE_RIGHT"
+                                   column="4"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="# Of Issues"/>
+                        </row>
+                        <row>
+                            <label id="Line13"
+                                   align="MIDDLE_CENTER"
+                                   colspan="5"
+                                   column="0"
+                                   height="1px"
+                                   row="1"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="740px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="Detail"
+                      height="31px"
+                      spacing="true"
+                      width="744px">
+                    <columns count="5"/>
+                    <rows>
+                        <row>
+                            <textField id="Sum_Of_Cost"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       datasource="qryrptcostDs"
+                                       height="20px"
+                                       property="sum_of_cost"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="160px"/>
+                            <textField id="Avg_Of_Cost"
+                                       align="MIDDLE_LEFT"
+                                       column="1"
+                                       datasource="qryrptcostDs"
+                                       height="20px"
+                                       property="avg_of_cost"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="140px"/>
+                            <textField id="Min_Of_Cost"
+                                       align="MIDDLE_LEFT"
+                                       column="2"
+                                       datasource="qryrptcostDs"
+                                       height="20px"
+                                       property="min_of_cost"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="150px"/>
+                            <textField id="Max_Of_Cost"
+                                       align="MIDDLE_LEFT"
+                                       column="3"
+                                       datasource="qryrptcostDs"
+                                       height="20px"
+                                       property="max_of_cost"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="150px"/>
+                            <textField id="Count_Of_qry_Catalog"
+                                       align="MIDDLE_LEFT"
+                                       column="4"
+                                       datasource="qryrptcostDs"
+                                       height="20px"
+                                       property="count_of_qry_rpt_catalog"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="120px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageFooterSection"
+                      height="43px"
+                      spacing="true"
+                      width="811px">
+                    <columns count="5"/>
+                    <rows>
+                        <row>
+                            <label id="Line14"
+                                   align="MIDDLE_CENTER"
+                                   colspan="5"
+                                   column="0"
+                                   height="1px"
+                                   row="0"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="740px"/>
+                        </row>
+                        <row>
+                            <textField id="Text11"
+                                       align="MIDDLE_LEFT"
+                                       colspan="2"
+                                       column="0"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="310px"/>
+                            <textField id="Text12"
+                                       align="MIDDLE_LEFT"
+                                       colspan="3"
+                                       column="2"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="430px"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="Catalog List Report"
+        class="com.xformix.comicbook.reports.rpt_catalog_list.Rpt_catalog_listCombo"
+        focusComponent="navigationTable"
+        lookupComponent="navigationTable"
+        messagesPack="com.xformix.comicbook.reports.rpt_catalog_list">
+    <dsContext>
+        <groupDatasource id="qryrptcatalogDs"
+                         class="com.xformix.comicbook.entity.QryRptCatalog"
+                         view="qryRptCatalog-view">
+            <query>
+                <![CDATA[ select e from comicbook$QryRptCatalog e order by e.title, e.issuenum, e.cost]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <actions>
+        <action id="save"
+                caption="mainMsg://actions.Ok"
+                icon="icons/ok.png"
+                invoke="save"
+                shortcut="CTRL-ENTER"/>
+        <action id="cancel"
+                caption="mainMsg://actions.Cancel"
+                description="Esc"
+                icon="icons/cancel.png"
+                invoke="cancel"/>
+    </actions>
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <hbox id="main"
+              height="100%"
+              orientation="horizontal"
+              pos="30"
+              width="100%">
+            <vbox id="lookupBox"
+                  height="100%"
+                  spacing="true"
+                  visible="false">
+                <groupTable id="navigationTable"
+                            height="100%"
+                            width="100%">
+                    <actions>
+                        <action id="create"/>
+                        <action id="edit"/>
+                        <action id="remove"/>
+                    </actions>
+                    <columns/>
+                    <rows datasource="qryrptcatalogDs"/>
+                    <rowsCount/>
+                    <buttonsPanel id="buttonsPanel"
+                                  alwaysVisible="true"
+                                  responsive="true">
+                        <button id="createBtn"
+                                action="navigationTable.create"/>
+                        <button id="editBtn"
+                                action="navigationTable.edit"/>
+                        <button id="removeBtn"
+                                action="navigationTable.remove"/>
+                    </buttonsPanel>
+                </groupTable>
+            </vbox>
+            <vbox id="editBox"
+                  expand="fieldGroupBox"
+                  height="100%"
+                  margin="false,false,false,true"
+                  spacing="true">
+                <vbox id="fieldGroupBox">
+                    <frame id="customFrame"
+                           height="100%"
+                           screen="comicbook$Rpt_catalog_list.frame"/>
+                </vbox>
+                <hbox id="actionsPane"
+                      spacing="true"
+                      visible="false">
+                    <button id="saveBtn"
+                            action="save"/>
+                    <button id="cancelBtn"
+                            action="cancel"/>
+                </hbox>
+            </vbox>
+        </hbox>
+    </layout>
+</window>

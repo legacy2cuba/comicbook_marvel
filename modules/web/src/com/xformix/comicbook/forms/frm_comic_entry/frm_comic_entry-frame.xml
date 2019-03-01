@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.forms.frm_comic_entry.Frm_comic_entryEdit"
+        messagesPack="com.xformix.comicbook.forms.frm_comic_entry">
+    <dsContext>
+        <collectionDatasource id="marvelSeriesDs"
+                              allowCommit="false"
+                              class="com.xformix.comicbook.entity.MarvelSeries"
+                              datasourceClass="com.xformix.marvel.datasource.MarvelSeriesDatasource"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <vbox id="TOP_LEVEL"
+                  height="100%"
+                  width="944px">
+                <grid id="Detail"
+                      spacing="true"
+                      width="100%">
+                    <columns count="4"/>
+                    <rows>
+                        <row>
+                            <label id="Label8"
+                                   align="BOTTOM_CENTER"
+                                   column="0"
+                                   height="40px"
+                                   row="0"
+                                   rowspan="2"
+                                   stylename="access-label comicbook-huge"
+                                   value="Comic Book Entry"/>
+                        </row>
+                        <row>
+                            <button align="BOTTOM_LEFT"
+                                    caption="Help"
+                                    invoke="showHelp"/>
+                            <lookupField id="findTitleLookup"
+                                         caption="Find Title"
+                                         column="2"
+                                         row="1"
+                                         width="100%"/>
+                            <image id="image"
+                                   column="4"
+                                   height="100%"
+                                   row="1"
+                                   rowspan="4"
+                                   width="300px"/>
+                        </row>
+                        <row>
+                            <lookupField id="Publisher"
+                                         align="MIDDLE_LEFT"
+                                         caption="Publisher"
+                                         column="0"
+                                         datasource="tbltitleDs"
+                                         property="publisher"
+                                         row="3"
+                                         width="209px"/>
+                            <textField id="SeriesName"
+                                       align="MIDDLE_LEFT"
+                                       caption="Series"
+                                       colspan="2"
+                                       column="1"
+                                       datasource="tbltitleDs"
+                                       inputPrompt="Enter the general name for a series "
+                                       property="series"
+                                       row="3"
+                                       width="100%"/>
+                        </row>
+                        <row>
+                            <lookupField id="Title"
+                                         align="MIDDLE_LEFT"
+                                         caption="Title"
+                                         column="0"
+                                         datasource="tbltitleDs"
+                                         property="title"
+                                         row="5"
+                                         width="100%"/>
+                            <checkBox id="Current"
+                                      align="BOTTOM_LEFT"
+                                      caption="Current Subscription"
+                                      colspan="2"
+                                      datasource="tbltitleDs"
+                                      height="34px"
+                                      property="current"
+                                      width="174px"/>
+                        </row>
+                        <row>
+                            <lookupField id="ComicTitle"
+                                         align="MIDDLE_LEFT"
+                                         caption="Issue Title"
+                                         column="0"
+                                         property="comicTitle"
+                                         row="5"
+                                         width="100%"/>
+                            <button id="button_1"
+                                    align="BOTTOM_LEFT"
+                                    caption="Add this Issue"
+                                    column="4"
+                                    invoke="doAddIssue"
+                                    row="3"
+                                    stylename="access-button"
+                                    value="Add Storage Location"
+                                    width="128px"/>
+                            <button id="Command18"
+                                    align="BOTTOM_LEFT"
+                                    caption="Add Storage Location"
+                                    column="4"
+                                    invoke="doAddStorage"
+                                    row="3"
+                                    stylename="access-button"
+                                    value="Add Storage Location"
+                                    width="164px"/>
+                        </row>
+                        <row>
+                            <frame id="Issue_Info_"
+                                   caption="Issue Info"
+                                   colspan="4"
+                                   column="0"
+                                   height="370px"
+                                   row="7"
+                                   screen="comicbook$Frm_sub_comic_entry.frame"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>

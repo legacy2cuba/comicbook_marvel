@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="comicbook" transaction-type="RESOURCE_LOCAL">
+
+    <class>com.xformix.comicbook.entity.SwitchboardItems</class>
+        <class>com.xformix.comicbook.entity.TblLocation</class>
+        <class>com.xformix.comicbook.entity.Tbltitle</class>
+        <class>com.xformix.comicbook.entity.Tblcatalog</class>
+        <class>com.xformix.comicbook.entity.QryListLocation</class>
+        <class>com.xformix.comicbook.entity.QryListPublisher</class>
+        <class>com.xformix.comicbook.entity.QryListSeries</class>
+        <class>com.xformix.comicbook.entity.QryListTitle</class>
+        <class>com.xformix.comicbook.entity.QryRptAge</class>
+        <class>com.xformix.comicbook.entity.QryRptCatalog</class>
+    <class>com.xformix.comicbook.entity.QryRptCost</class>
+        <class>com.xformix.comicbook.entity.QryRptLocation</class>
+        <class>com.xformix.comicbook.entity.QryRptPublisher</class>
+        <class>com.xformix.comicbook.entity.QryRptSeries</class>
+        <class>com.xformix.comicbook.entity.QryRptSubscriptions</class>
+        <class>com.xformix.comicbook.entity.QryRptTitle</class>
+        <class>com.xformix.comicbook.entity.QryRptUnknown</class>
+    </persistence-unit>
+</persistence>

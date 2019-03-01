@@ -1,0 +1,36 @@
+/* Define your theme modifications inside next mixin */
+@mixin com_xformix_comicbook-halo-ext {
+
+//deploy with deployThemes task
+
+.v-textfield, .v-filterselect-input, .v-filterselect, .v-table-cell-wrapper, .v-table-cell-content {
+background-color : red !important;
+color : white !important;
+border : 1px !important; 
+}
+
+.comicbook-huge {
+    font-weight: BOLD;
+    font-size: 30px; 
+}
+
+.v-selected {
+background-color : black !important;
+color : green !important;
+border : 5px !important; 
+}
+
+.report-line1 {
+    background-color : black;
+    height : 1px;
+    width : 100%;
+}
+.report-line {
+    border-top : 1px solid black;
+    height : 24px;
+    width : 100%;
+}
+.v-grid-cell, .v-grid-column-header-content{
+  text-align: right;
+}
+}

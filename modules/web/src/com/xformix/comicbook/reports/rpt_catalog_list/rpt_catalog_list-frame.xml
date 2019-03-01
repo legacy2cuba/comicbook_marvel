@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_catalog_list.Rpt_catalog_listEdit"
+        datasource="qryrptcatalogDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.reports.rpt_catalog_list">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="864.0px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="43.2px" width="862.72px"  >
+        <columns count="7"/>
+        <rows>
+          <row>
+            <label  id="Label12" value="Comic Book Listing"  height="40.0px" rowspan="2" colspan="2" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+              <label  id="Label21" value="Total # of Issues:"  height="20.0px" row="1" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <textField  id="Text20" height="20.0px" width="180.0px" row="1" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeader"  height="12.0px" width="973.44px"  >
+        <columns count="7"/>
+        <rows>
+          <row>
+            <label  id="Publisher_Label" value="Publisher"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Title_Label" value="Title"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="IssueNUM_Label" value="Issue#"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Issue_Date_Label" value="Issue Date"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Cost_Label" value="Cost"  height="20.0px" row="0" column="4"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Comments_Label" value="Comments"  height="20.0px" row="0" column="5"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Label17" value="Location"  height="20.0px" row="0" column="6"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line20" height="1.0px" width="860.0px" colspan="7" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="10.4px" width="973.36px"  >
+        <columns count="7"/>
+        <rows>
+          <row>
+            <textField  id="Publisher" property="publisher"  datasource="qryrptcatalogDs"  height="20.0px" width="70.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Title" property="title"  datasource="qryrptcatalogDs"  height="20.0px" width="180.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="IssueNUM" property="issuenum"  datasource="qryrptcatalogDs"  height="20.0px" width="40.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <dateField resolution="DAY"  id="Issue_Date" property="issue_date"  datasource="qryrptcatalogDs"  height="20.0px" width="120.0px" row="0" column="3"   stylename="access-datefield"  align="MIDDLE_LEFT"/>
+            <textField  id="Cost" property="cost"  datasource="qryrptcatalogDs"  height="20.0px" width="30.0px" row="0" column="4"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Comments" property="comments"  datasource="qryrptcatalogDs"  height="20.0px" width="280.0px" row="0" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Location" property="location"  datasource="qryrptcatalogDs"  height="20.0px" width="180.0px" row="0" column="6"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooter"  height="30.0px" width="963.51996px"  >
+        <columns count="7"/>
+        <rows>
+          <row>
+            <label  id="Line16" height="1.0px" width="860.0px" colspan="7" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="Text13" height="20.0px" width="360.0px" colspan="4" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Text14" height="20.0px" width="460.0px" colspan="2" row="1" column="5"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

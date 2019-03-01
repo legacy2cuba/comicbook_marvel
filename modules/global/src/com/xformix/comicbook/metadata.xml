@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+    <metadata-model namespace="comicbook"
+                    root-package="com.xformix.comicbook">
+        <class>com.xformix.comicbook.entity.MarvelCharacter</class>
+        <class>com.xformix.comicbook.entity.MarvelComic</class>
+        <class>com.xformix.comicbook.entity.MarvelSeries</class>
+    </metadata-model>
+</metadata>

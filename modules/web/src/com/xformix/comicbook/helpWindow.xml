@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="HELP"
+        class="com.xformix.comicbook.Helpwindow"
+        messagesPack="com.xformix.comicbook">
+    <dialogMode closeOnClickOutside="true"
+                closeable="true"
+                height="400"
+                resizable="true"
+                width="600"/>
+    <layout>
+        <label height="100%"
+               htmlEnabled="true"
+               value="&lt;B&gt;Quick guide:&lt;/B&gt;
+               &lt;ul&gt;
+               &lt;li&gt;
+               Marvel comics data are retrieved from the Marvel Comics web API and used to help fill in fields.
+               &lt;li&gt;
+You can also add in comics that are non-Marvel, but you will need to enter all data by hand.
+               &lt;li&gt;
+You type something like &quot;Spider-Man&quot; or &quot;Hulk&quot; in the &quot;Series&quot; field and then the Marvel service is used to get all series starting with that text.
+It then fills up the &quot;Title&quot; list with those titles.
+               &lt;li&gt;
+If you pick a title then it uses the Marvel service to get all the issues under that title and fills up the &quot;Issue Title&quot; dropdown.
+               &lt;li&gt;
+You then hit &quot;Add this issue&quot; and a dialog pops up - some of the values are filled in by Marvel but you can change them.
+               &lt;li&gt;
+Then &quot;OK&quot; and the issue is added to the list.
+               &lt;li&gt;
+To use &quot;Find title&quot;, start typing and the dropdown will be populated from the issues in your database. Pick a title and that title is loaded.
+&lt;/ul&gt;"
+               width="100%">
+               </label>
+    </layout>
+</window>

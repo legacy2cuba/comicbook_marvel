@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window  xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_unknown.Rpt_unknownEdit"
+        datasource="qryrptunknownDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.reports.rpt_unknown">
+    <dialogMode height="600"
+                width="800"/>
+<layout spacing="true" >
+    <scrollBox width="100%" height="100%" spacing="false" margin="false">
+    <vbox id="TOP_LEVEL" width="748.8px" height="100%"  stylename="report" >
+      <grid spacing="true" id="ReportHeader"  height="57.6px" width="139.2px"  >
+        <columns count="1"/>
+        <rows>
+          <row>
+          <label  id="Label4" value="Lost / Missing Books"  height="40.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageHeaderSection"  height="33.6px" width="758.39996px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="Label9" value="Publisher"  height="20.0px" row="0" column="0"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Title_Label" value="Title"  height="20.0px" row="0" column="1"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="IssueNUM_Label" value="Issue#"  height="20.0px" row="0" column="2"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+            <label  id="Label11" value="Cost"  height="20.0px" row="0" column="3"  align="MIDDLE_RIGHT" htmlEnabled="false" stylename="access-label"/>
+          </row>
+          <row>
+            <label  id="Line7" height="1.0px" width="740.0px" colspan="4" row="1" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="Detail"  height="31.199999px" width="744.0px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <textField  id="Publisher" property="publisher"  datasource="qryrptunknownDs"  height="20.0px" width="130.0px" row="0" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Title" property="title"  datasource="qryrptunknownDs"  height="20.0px" width="240.0px" row="0" column="1"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="IssueNUM" property="issuenum"  datasource="qryrptunknownDs"  height="20.0px" width="250.0px" row="0" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Cost" property="cost"  datasource="qryrptunknownDs"  height="20.0px" width="100.0px" row="0" column="3"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+      <grid spacing="true" id="PageFooterSection"  height="43.2px" width="748.8px"  >
+        <columns count="4"/>
+        <rows>
+          <row>
+            <label  id="Line8" height="1.0px" width="740.0px" colspan="4" row="0" column="0"  align="MIDDLE_CENTER" value=" " stylename="report-line" />
+          </row>
+          <row>
+            <textField  id="Text5" height="20.0px" width="370.0px" colspan="2" row="1" column="0"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+            <textField  id="Text6" height="20.0px" width="360.0px" colspan="2" row="1" column="2"  stylename="access-textfield"  align="MIDDLE_LEFT"/>
+          </row>
+        </rows>
+      </grid>
+</vbox>
+</scrollBox>
+</layout>
+</window>

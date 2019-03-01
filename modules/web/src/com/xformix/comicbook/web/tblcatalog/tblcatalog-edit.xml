@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.web.tblcatalog.TblcatalogEdit"
+        datasource="tblcatalogDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.xformix.comicbook.web.tblcatalog">
+    <dsContext>
+        <datasource id="tblcatalogDs"
+                    class="com.xformix.comicbook.entity.Tblcatalog"
+                    view="tblcatalog-view"/>
+        <collectionDatasource id="locationnumsDs"
+                              class="com.xformix.comicbook.entity.TblLocation"
+                              view="_minimal">
+            <query>
+                <![CDATA[select e from comicbook$TblLocation e order by e.sort_order]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode forceDialog="true"
+                height="AUTO"
+                width="600"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="tblcatalogDs">
+            <column width="250px">
+                <field caption="Title"
+                       property="comicTitle"/>
+                <field caption="Issue #"
+                       property="issuenum"/>
+                <field caption="Cost"
+                       property="cost"/>
+                <field caption="Issue Date"
+                       property="issue_date"/>
+                <field caption="Comments"
+                       property="comments"/>
+                <field caption="Location"
+                       optionsDatasource="locationnumsDs"
+                       property="locationnum"
+                       required="true"
+                       requiredMessage="You must pick a location"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

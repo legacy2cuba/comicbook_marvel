@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.forms.frm_sub_comic_entry.Frm_sub_comic_entryEdit"
+        messagesPack="com.xformix.comicbook.forms.frm_sub_comic_entry">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <grid height="100%"
+              spacing="true"
+              width="100%">
+            <columns count="1"/>
+            <rows>
+                <row>
+                    <grid id="FormHeader"
+                          spacing="true"
+                          visible="false"
+                          width="100%">
+                        <columns count="5"/>
+                        <rows>
+                            <row>
+                                <label id="IssueNUM_Label"
+                                       align="MIDDLE_RIGHT"
+                                       column="0"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Issue#"/>
+                                <label id="Issue_Date_Label"
+                                       align="MIDDLE_RIGHT"
+                                       column="1"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Issue Date"/>
+                                <label id="Cost_Label"
+                                       align="MIDDLE_RIGHT"
+                                       column="2"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Cost"/>
+                                <label id="Comments_Label"
+                                       align="MIDDLE_RIGHT"
+                                       column="3"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Comments"/>
+                                <label id="Label12"
+                                       align="MIDDLE_RIGHT"
+                                       column="4"
+                                       height="20px"
+                                       row="0"
+                                       stylename="access-label"
+                                       value="Storage Location"/>
+                            </row>
+                        </rows>
+                    </grid>
+                </row>
+                <row flex="1.0">
+                    <groupTable id="ComicDetail"
+                                height="100%"
+                                width="100%"
+                                x="0"
+                                y="0">
+                        <actions>
+                            <action id="edit"/>
+                            <action id="remove"/>
+                        </actions>
+                        <columns>
+                            <column id="comicTitle"
+                                    caption="Title"
+                                    property="comicTitle"/>
+                            <column id="issuenum"
+                                    caption="Issue#"
+                                    property="issuenum"/>
+                            <column id="issue_date"
+                                    caption="Issue Date"
+                                    property="issue_date"/>
+                            <column id="cost"
+                                    caption="Cost"
+                                    property="cost"/>
+                            <column id="comments"
+                                    caption="Comments"
+                                    property="comments"/>
+                            <column id="locationnum"
+                                    caption="Storage Location"
+                                    property="locationnum"/>
+                        </columns>
+                        <rows datasource="tblcatalogDs"/>
+                    </groupTable>
+                </row>
+                <row/>
+            </rows>
+        </grid>
+    </layout>
+</window>

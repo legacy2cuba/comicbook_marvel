@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.xformix.comicbook.reports.rpt_subscriptions.Rpt_subscriptionsEdit"
+        messagesPack="com.xformix.comicbook.reports.rpt_subscriptions">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true">
+        <scrollBox height="100%">
+            <vbox id="TOP_LEVEL"
+                  height="100%"
+                  stylename="report"
+                  width="748px">
+                <grid id="ReportHeader"
+                      height="62px"
+                      spacing="true"
+                      width="384px">
+                    <columns count="2"/>
+                    <rows>
+                        <row>
+                            <label id="Label4"
+                                   align="MIDDLE_RIGHT"
+                                   colspan="2"
+                                   column="0"
+                                   height="45px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Current Subscriptions"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageHeaderSection"
+                      height="33px"
+                      spacing="true"
+                      width="567px">
+                    <columns count="2"/>
+                    <rows>
+                        <row>
+                            <label id="Publisher_Label"
+                                   align="MIDDLE_LEFT"
+                                   column="0"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Publisher"/>
+                            <label id="Title_Label"
+                                   align="MIDDLE_LEFT"
+                                   column="1"
+                                   height="20px"
+                                   row="0"
+                                   stylename="access-label"
+                                   value="Title"/>
+                        </row>
+                        <row>
+                            <label id="Line7"
+                                   align="MIDDLE_CENTER"
+                                   colspan="2"
+                                   column="0"
+                                   height="1px"
+                                   row="1"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="570px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="Detail"
+                      height="31px"
+                      spacing="true"
+                      width="710px">
+                    <columns count="2"/>
+                    <rows>
+                        <row>
+                            <textField id="Publisher"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       datasource="qryrptsubscriptionsDs"
+                                       height="20px"
+                                       property="publisher"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="130px"/>
+                            <textField id="Title"
+                                       align="MIDDLE_LEFT"
+                                       column="1"
+                                       datasource="qryrptsubscriptionsDs"
+                                       height="22px"
+                                       property="title"
+                                       row="0"
+                                       stylename="access-textfield"
+                                       width="241px"/>
+                        </row>
+                    </rows>
+                </grid>
+                <grid id="PageFooterSection"
+                      height="82px"
+                      spacing="true"
+                      width="748px">
+                    <columns count="2"/>
+                    <rows>
+                        <row>
+                            <label id="Line8"
+                                   align="MIDDLE_CENTER"
+                                   colspan="2"
+                                   column="0"
+                                   height="1px"
+                                   row="0"
+                                   stylename="report-line"
+                                   value=" "
+                                   width="740px"/>
+                        </row>
+                        <row>
+                            <textField id="Text5"
+                                       align="MIDDLE_LEFT"
+                                       column="0"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="370px"/>
+                            <textField id="Text6"
+                                       align="MIDDLE_LEFT"
+                                       column="2"
+                                       height="20px"
+                                       row="1"
+                                       stylename="access-textfield"
+                                       width="360px"/>
+                        </row>
+                    </rows>
+                </grid>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu>
+    <menu icon="icons/bulk-edit.png" id="forms">
+        <item screen="comicbook$Frm_comic_entry.combo"/>
+        <item screen="comicbook$TblLocation.browse"/>
+    </menu>
+    <menu icon="icons/bulk-edit.png" id="reports">
+        <item screen="comicbook$Rpt_unknown.combo"/>
+        <item screen="comicbook$Rpt_age.combo"/>
+        <item screen="comicbook$Rpt_catalog_list.combo"/>
+        <item screen="comicbook$Rpt_subscriptions.combo"/>
+        <item screen="comicbook$Rpt_catalog.combo"/>
+        <item screen="comicbook$Rpt_location.combo"/>
+        <item screen="comicbook$Rpt_publisher.combo"/>
+        <item screen="comicbook$Rpt_cost.combo"/>
+        <item screen="comicbook$Rpt_series.combo"/>
+        <item screen="comicbook$Rpt_title.combo"/>
+    </menu>
+</menu>
