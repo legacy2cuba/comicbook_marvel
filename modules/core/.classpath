@@ -81,4 +81,7 @@
 	<classpathentry sourcepath="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/org.jmockit/jmockit/1.15/ed9f985453802141cb2ce8c94f67b19bbef72772/jmockit-1.15-sources.jar" kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/org.jmockit/jmockit/1.15/2affc87ab01271349f9a65c6343ef3f09cc9ee8/jmockit-1.15.jar"/>
 	<classpathentry sourcepath="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212/d007dc0d6b3470582929bae1346c0659a4d448eb/postgresql-9.4.1212-sources.jar" kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212/38931d70811d9bfcecf9c06f7222973c038a12de/postgresql-9.4.1212.jar"/>
 	<classpathentry sourcepath="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/apitools-core-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/cubautils-web-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/itextpdf-5.5.10.jar"/>
 </classpath>

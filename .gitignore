@@ -1,0 +1,5 @@
+!/.gradle
+build/**
+modules/*/bin/**
+modules/*/build/**
+deploy/**

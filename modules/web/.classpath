@@ -105,5 +105,7 @@
 	<classpathentry sourcepath="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/com.haulmont.cuba/cuba-web-themes/6.10.7/38f659a4649703e7c99563cabf834b93fb44b5d3/cuba-web-themes-6.10.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jonathan/.gradle/caches/modules-2/files-2.1/com.vaadin/vaadin-themes/7.7.15.cuba.4/1e255e509c88c33e6a2c4fefc37be05ab6dc305/vaadin-themes-7.7.15.cuba.4.jar"/>
-	<classpathentry kind="lib" path="C:/cuba-studio-projects/comicbook_marvel/modules/web/web/WEB-INF/lib/itextpdf-5.5.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/apitools-core-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/cubautils-web-0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jonathan/Documents/GitHub/legacy2cuba/comicbook_marvel/modules/web/web/WEB-INF/lib/itextpdf-5.5.10.jar"/>
 </classpath>

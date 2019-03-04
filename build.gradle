@@ -74,6 +74,9 @@ configure(globalModule) {
             enabled = true
         }
     }
+    dependencies {
+        compile(fileTree(dir: '../web/web/WEB-INF/lib', include: ['*.jar']))
+    }
 
     
 }
@@ -134,7 +137,6 @@ configure(webModule) {
     dependencies {
         provided(servletApi)
         compile(globalModule)
-        compile(fileTree(dir: 'web/WEB-INF/lib', include: ['*.jar']))
     }
     
     task webArchive(type: Zip) {
