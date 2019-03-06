@@ -37,7 +37,7 @@ cuba {
         isSnapshot = true
     }
     tomcat {
-        dir = "C:/cuba-projects-deploy/comicbook/deploy/tomcat"
+        dir = "$project.rootDir/deploy/tomcat"
     }
 }
 
