@@ -18,7 +18,9 @@ public class MarvelServiceBean extends APIServiceBean implements MarvelService {
 	private static Logger logger = Logger.getLogger(MarvelServiceBean.class);
 
 	/**
-	 * These keys are specified in app.properties
+	 * THESE KEYS ARE SPECIFIED IN app.properties
+	 * YOU MUST GET YOUR OWN KEYS FROM MARVEL AND CHANGE THEM IN  app.properties 
+	 * https://www.marvel.com/register
 	 */
 	private static String publicKey = AppContext.getProperty("marvelapi.publicKey");
 	private static String privateKey = AppContext.getProperty("marvelapi.privateKey");
