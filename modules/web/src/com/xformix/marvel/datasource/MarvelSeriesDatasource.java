@@ -13,18 +13,14 @@ import com.xformix.comicbook.service.MarvelService;
 
 public class MarvelSeriesDatasource extends CustomCollectionDatasource<MarvelSeries, UUID> {
 
-    private MarvelService marvelService = AppBeans.get(MarvelService.NAME);
+	private MarvelService marvelService = AppBeans.get(MarvelService.NAME);
 
-    @Override
-    protected Collection<MarvelSeries> getEntities(Map params) {
-	String startsWith = (String) params.get("startsWith");
-	System.out.println("GET SERIES "+startsWith);
-	Collection<MarvelSeries> list = null;
-	if(startsWith == null || startsWith.equals(""))
-	    return new ArrayList<>();
-	list = marvelService.getSeries(startsWith);
-	System.out.println("GOT LIST");
-	return list;
-    }
+	@Override
+	protected Collection<MarvelSeries> getEntities(Map params) {
+		String startsWith = (String) params.get("startsWith");
+		if (startsWith == null || startsWith.equals(""))
+			return new ArrayList<>();
+		return marvelService.getSeries(startsWith);
+	}
 
 }

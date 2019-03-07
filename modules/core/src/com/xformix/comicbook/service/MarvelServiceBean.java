@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+import com.haulmont.cuba.core.sys.AppContext;
+import com.itextpdf.text.log.SysoCounter;
 import com.xformix.apitools.service.APIServiceBean;
 import com.xformix.comicbook.entity.MarvelCharacter;
 import com.xformix.comicbook.entity.MarvelComic;
@@ -16,30 +18,13 @@ public class MarvelServiceBean extends APIServiceBean implements MarvelService {
 	private static Logger logger = Logger.getLogger(MarvelServiceBean.class);
 
 	/**
-	 * YOU MUST REPLACE THESE KEYS WITH YOUR OWN ONES WHICH YOU CAN GET HERE:
-	 * https://www.marvel.com/register
+	 * These keys are specified in app.properties
 	 */
-	private static String publicKey = "e4caebb35277c645b6134b5db889e74b";
-	private static String privateKey = "f8d3766b5d2b4b7d14e9e2c6792258e8c3fb3196";
+	private static String publicKey = AppContext.getProperty("marvelapi.publicKey");
+	private static String privateKey = AppContext.getProperty("marvelapi.privateKey");
 
 	private static String ts = "1";
 	private static String hash = null;
-
-	public static void main(String[] args) {
-		MarvelServiceBean mb = new MarvelServiceBean();
-		List<MarvelComic> comics = mb.getComics("Spider");
-		for (MarvelComic com : comics) {
-			logger.info("Got comic " + com.getTitle() + ", " + com.getMarvelid() + ", " + com.getImage());
-			String[] names = com.getCreators();
-			for (String cre : names) {
-				System.out.println("  -> " + cre);
-			}
-		}
-		List<MarvelSeries> sers = mb.getSeries("Spider");
-		for (MarvelSeries ser : sers) {
-			logger.info("Got series " + ser.getTitle() + ", " + ser.getMarvelid());
-		}
-	}
 
 	@Override
 	protected String getBaseURL(String type, Integer id) {
