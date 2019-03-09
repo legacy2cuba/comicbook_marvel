@@ -90,7 +90,7 @@ annotation. Since creators/items is a json array in the Comic json object, the M
 APIServiceBean
 ==============
 
-The APIServiceBean provides helper methods to make setting up a connection to the service easier. The getBaseURL should be
+The MarvelServiceBean class extends the APIServiceBean class, which provides helper methods to make setting up a connection to the service easier. The getBaseURL should be
 implemented with knowledge of the service and how to construct the authorization hash.
 ```java
 	@Override
@@ -122,4 +122,7 @@ along with the additional query string and the class that will be populated from
 	}
 ```
 
+The Datasource
+==============
+The MarvelCharacterDatasource merely calls the MarvelCharacterService and passes on the Collection of MarvelCharacters to the user of the Datasource.
 
